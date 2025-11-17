@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // --- Configuração e Verificação ---
     
-    const API_URL = "http://127.0.0.1:5000"; // Porta correta
+    const API_URL = ""; // Porta correta
     const token = localStorage.getItem("token");
 
     // Se não há token, redireciona para login
@@ -222,4 +222,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- Inicialização ---
     fetchTasks();
+
 });
