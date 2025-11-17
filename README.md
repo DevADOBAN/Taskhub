@@ -70,3 +70,15 @@ flask run
 cd ../frontend
 open index.html  # ou use live server
 </code></pre>
+
+# Requisitos (pip install ???)
+
+Flask: O framework principal para construir o servidor e as rotas da API.
+
+
+Flask-SQLAlchemy: Para interagir com o banco de dados e definir os modelos (Modelos Usuário e Tarefa ).
+
+
+Flask-JWT-Extended: Para lidar com a autenticação JWT (JSON Web Token) , necessária para os endpoints de login e signup.
+
+Flask-Cors: Essencial para permitir que o seu Front End (rodando em outra porta/domínio) possa fazer requisições para esta API.
