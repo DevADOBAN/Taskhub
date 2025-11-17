@@ -5,7 +5,7 @@ import os
 
 # --- Configurações ---
 PORT = 8000
-HOST = "127.0.0.1"
+HOST = ""
 URL = f"http://{HOST}:{PORT}/"
 # --------------------
 
@@ -30,4 +30,5 @@ try:
 
 except KeyboardInterrupt:
     print("\nServidor do Front-End desligado.")
+
     httpd.shutdown()
