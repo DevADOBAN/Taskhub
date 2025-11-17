@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskHub - Minhas Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <h2>TaskHub</h2>
+            <button id="logout-btn" class="btn btn-secondary">Sair</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="tasks-header">
+            <h3>Minhas Tarefas</h3>
+            <button id="add-task-btn" class="btn">Nova Tarefa</button>
+        </div>
+
+        <div id="task-list" class="task-list">
+            </div>
+    </main>
+
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <form id="task-form">
+                <h3 id="modal-title">Nova Tarefa</h3>
+                <input type="hidden" id="task-id">
+                
+                <div class="form-group">
+                    <label for="title">Título</label>
+                    <input type="text" id="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Descrição</label>
+                    <textarea id="description" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">Prioridade</label>
+                    <select id="priority" required>
+                        <option value="Baixa">Baixa</option>
+                        <option value="Média">Média</option>
+                        <option value="Alta">Alta</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status">
+                        <option value="Pendente">Pendente</option>
+                        <option value="Em Andamento">Em Andamento</option>
+                        <option value="Concluída">Concluída</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn">Salvar</button>
+                <p id="modal-error" class="error-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="tasks.js"></script>
+</body>
+</html>
