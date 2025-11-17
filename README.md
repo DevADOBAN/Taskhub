@@ -53,4 +53,20 @@
 
 ---
 
-## 📦 Estrutura do Projeto
+Como Executar Localmente</h2>
+    <pre><code># Clone o repositório
+git clone https://github.com/seu-usuario/taskhub.git
+cd taskhub
+
+# Back-end
+cd backend
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# venv\Scripts\activate   # Windows
+pip install -r requirements.txt
+flask run
+
+# Front-end (em outra aba)
+cd ../frontend
+open index.html  # ou use live server
+</code></pre>
