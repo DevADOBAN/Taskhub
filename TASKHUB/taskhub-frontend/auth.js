@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     // Define a URL base da nossa API
-    const API_URL = "http://127.0.0.1:5000"; // A URL onde o Back End Flask está rodando
+    const API_URL = ""; // A URL onde o Back End Flask está rodando
 
     // Pega os elementos do formulário (com verificações para evitar erros)
     const loginForm = document.getElementById("login-form");
@@ -130,3 +130,4 @@ document.addEventListener("DOMContentLoaded", () => {
         console.warn("Formulário de cadastro não encontrado nesta página.");
     }
 });
+
