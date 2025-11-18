@@ -12,7 +12,7 @@ def driver():
     # Isso baixa e instala o driver correto automaticamente
     service = Service(ChromeDriverManager().install())
     
-    # Opções do Chrome (opcional, mas útil)
+    
     options = webdriver.ChromeOptions()
     # options.add_argument("--headless")  # Descomente para rodar sem abrir a janela
     options.add_argument("--start-maximized")
@@ -25,4 +25,5 @@ def driver():
     
     # Código de "limpeza" (executa após o teste terminar)
     print("\nFechando o navegador...")
+
     driver.quit()
