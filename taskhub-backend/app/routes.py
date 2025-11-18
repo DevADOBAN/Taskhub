@@ -1,4 +1,3 @@
-# app/routes.py
 from flask import request, jsonify
 from app import db, bcrypt
 from app.models import User, Task
@@ -9,9 +8,7 @@ import traceback
 
 def init_routes(app):
 
-    # ======================================================
-    # SIGNUP
-    # ======================================================
+    # ===SIGNUP === #
     @app.route("/auth/signup", methods=["POST"])
     def signup():
         if not request.is_json:
@@ -41,9 +38,7 @@ def init_routes(app):
 
         return jsonify({"message": "Usuário criado com sucesso"}), 201
 
-    # ======================================================
-    # LOGIN
-    # ======================================================
+    # === LOGIN === #
     @app.route("/auth/login", methods=["POST"])
     def login():
         if not request.is_json:
@@ -61,14 +56,11 @@ def init_routes(app):
         if not user or not bcrypt.check_password_hash(user.password_hash, password):
             return jsonify({"message": "Credenciais inválidas"}), 401
 
-        # TOKEN CORRETO – identity deve ser string
         token = create_access_token(identity=str(user.id))
 
         return jsonify({"access_token": token}), 200
 
-    # ======================================================
-    # USER INFO
-    # ======================================================
+    # ===USER INFO === #
     @app.route("/auth/me", methods=["GET"])
     @jwt_required()
     def get_me():
@@ -84,9 +76,7 @@ def init_routes(app):
             "name": user.name
         }), 200
 
-    # ======================================================
-    # CREATE TASK
-    # ======================================================
+    # === CRIAR TASK === #
     @app.route("/api/tasks", methods=["POST"])
     @jwt_required()
     def create_task():
@@ -123,9 +113,7 @@ def init_routes(app):
             print("============================\n")
             return jsonify({"message": "Erro ao criar tarefa"}), 500
 
-    # ======================================================
-    # LIST TASKS
-    # ======================================================
+    # === LIST TASKS === #
     @app.route("/api/tasks", methods=["GET"])
     @jwt_required()
     def get_tasks():
@@ -142,9 +130,7 @@ def init_routes(app):
             print("===============================\n")
             return jsonify({"message": "Erro ao buscar tarefas"}), 500
 
-    # ======================================================
-    # UPDATE TASK
-    # ======================================================
+    # === UPDATE TASK === #
     @app.route("/api/tasks/<int:task_id>", methods=["PUT"])
     @jwt_required()
     def update_task(task_id):
@@ -174,9 +160,7 @@ def init_routes(app):
             print("=================================\n")
             return jsonify({"message": "Erro ao atualizar tarefa"}), 500
 
-    # ======================================================
-    # DELETE TASK
-    # ======================================================
+    # === DELETE TASK === #
     @app.route("/api/tasks/<int:task_id>", methods=["DELETE"])
     @jwt_required()
     def delete_task(task_id):
@@ -200,3 +184,4 @@ def init_routes(app):
             traceback.print_exc()
             print("================================\n")
             return jsonify({"message": "Erro ao excluir tarefa"}), 500
+
