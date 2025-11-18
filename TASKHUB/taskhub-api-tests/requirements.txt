@@ -1,9 +1,0 @@
-# taskhub-api-tests/requirements.txt
-
-pytest
-pytest-flask
-Faker
-
-# Instrui o pip a instalar o app 'taskhub-backend' 
-# que está na pasta ao lado, em modo "editável".
--e ../taskhub-backend
