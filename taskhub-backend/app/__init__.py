@@ -1,4 +1,3 @@
-# app/__init__.py
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
@@ -19,7 +18,7 @@ def create_app(config_class=Config):
     bcrypt.init_app(app)
     jwt.init_app(app)
 
-    # CORS CORRIGIDO — permite o front rodando em 127.0.0.1:8000
+
     CORS(
         app,
         resources={r"/*": {"origins": ["http://127.0.0.1:8000", "http://localhost:8000"]}},
@@ -33,3 +32,4 @@ def create_app(config_class=Config):
         db.create_all()
 
     return app
+
