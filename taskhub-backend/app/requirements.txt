@@ -1,0 +1,12 @@
+# Core Framework
+Flask
+python
+
+# Banco de Dados e ORM (Para o CRUD de Usuários e Tarefas)
+Flask-SQLAlchemy
+Flask-Migrate
+
+# Autenticação e Segurança (Para JWT e Hash de Senha)
+Flask-JWT-Extended
+Flask-Bcrypt
+Flask-CORS
