@@ -4,7 +4,7 @@ from pages.base_page import BasePage
 class SignupPage(BasePage):
     """Page Object para a tela de Cadastro (signup.html)"""
     
-    # Locators (os 'seletores' dos elementos)
+    # Locators 
     URL_PATH = "/signup.html"
     NAME_INPUT = (By.ID, "name")
     EMAIL_INPUT = (By.ID, "email")
@@ -21,4 +21,5 @@ class SignupPage(BasePage):
         self.type_into(self.NAME_INPUT, name)
         self.type_into(self.EMAIL_INPUT, email)
         self.type_into(self.PASSWORD_INPUT, password)
+
         self.click(self.SIGNUP_BUTTON)
