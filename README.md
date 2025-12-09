@@ -84,3 +84,10 @@ Flask-SQLAlchemy: Para interagir com o banco de dados e definir os modelos (Mode
 Flask-JWT-Extended: Para lidar com a autenticação JWT (JSON Web Token) , necessária para os endpoints de login e signup.
 
 Flask-Cors: Essencial para permitir que o seu Front End (rodando em outra porta/domínio) possa fazer requisições para esta API.
+
+<img width="729" height="632" alt="taskhub read" src="https://github.com/user-attachments/assets/8474f176-d02d-41b3-a669-bc59937cab59" />
+<img width="878" height="309" alt="task" src="https://github.com/user-attachments/assets/c241135e-28c8-4cfe-84ce-04308efcaf2f" />
+<img width="392" height="370" alt="tasklogin" src="https://github.com/user-attachments/assets/eaecb725-47fa-4df2-9728-7281fd3c944f" />
+
+
+
