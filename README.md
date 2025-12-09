@@ -58,8 +58,9 @@ Como Executar Localmente</h2>
 git clone https://github.com/seu-usuario/taskhub.git
 cd taskhub
 
-# Back-end
-cd backend
+# Back-end (1 terminal)
+cd taskhub-backend
+python run.py
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 # venv\Scripts\activate   # Windows
@@ -67,8 +68,9 @@ pip install -r requirements.txt
 flask run
 
 # Front-end (em outra aba)
-cd ../frontend
-open index.html  # ou use live server
+cd taskhub-frontend
+python start-frontend.py
+open index.html ou use live server
 </code></pre>
 
 # Requisitos (pip install ???)
